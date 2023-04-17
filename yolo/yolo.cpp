@@ -129,7 +129,7 @@ int main() {
     this_thread::sleep_for(chrono::milliseconds(delay));
 
     if (waitKey(1) >= 0) {
-		digitalWrite(LEFT_PIN, LOW);
+	digitalWrite(LEFT_PIN, LOW);
         digitalWrite(RIGHT_PIN, LOW);
         break;
     }
