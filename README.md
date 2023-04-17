@@ -30,7 +30,7 @@ libcamera-jpeg -o image.jpg
 https://github.com/cedricve/raspicam
 ```
 7. Clone program files onto the rasperry pi.
-8. Got to the yolo directory and run the following to compile and run the system
+8. Go to the yolo directory and run the following to compile and run the system
 ```bash
 g++ -std=c++11 -o yolo yolo.cpp `pkg-config opencv4 --cflags --libs` -lraspicam -lraspicam_cv -lopencv_highgui -DWITH_QT -Wno-psabi -pthread -lwiringPi
 ./yolo
