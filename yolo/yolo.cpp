@@ -3,6 +3,7 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 #include <chrono>
+#include <thread>
 
 using namespace std;
 using namespace cv;
@@ -95,7 +96,12 @@ int main() {
         }       
     processFrame(frame, net);
 
-    imshow("Camera Stream", frame);
+    try {
+    	imshow("Camera Stream", frame);
+    } catch (const cv::Exception& e) {
+        continue;
+    }
+
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
     int delay = max(1, (int)(16 - chrono::duration <double, milli> (diff).count()));
