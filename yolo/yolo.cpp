@@ -55,7 +55,7 @@ void processFrame(Mat& frame, Net& net) {
 
     vector<int> indices;
     NMSBoxes(boxes, confidences, CONFIDENCE_THRESHOLD, NMS_THRESHOLD, indices);
-    
+
     float minDistance = numeric_limits<float>::max();
     string position;
     for (int idx : indices) {
@@ -67,10 +67,16 @@ void processFrame(Mat& frame, Net& net) {
             minDistance = distance;
             if (centerX < frameWidth / 3) {
                 position = "left";
+                digitalWrite(LEFT_PIN, HIGH);
+                digitalWrite(RIGHT_PIN, LOW);
             } else if (centerX > 2 * frameWidth / 3) {
                 position = "right";
+                digitalWrite(LEFT_PIN, LOW);
+                digitalWrite(RIGHT_PIN, HIGH);
             } else {
                 position = "center";
+                digitalWrite(LEFT_PIN, HIGH);
+                digitalWrite(RIGHT_PIN, HIGH);
             }
         }        
     }
