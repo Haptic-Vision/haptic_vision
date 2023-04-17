@@ -4,6 +4,7 @@
 #include <opencv2/highgui.hpp>
 #include <chrono>
 #include <thread>
+#include <wiringPi.h>
 
 using namespace std;
 using namespace cv;
@@ -14,6 +15,8 @@ const string WEIGHTS_FILE = "yolov4-tiny.weights";
 const float CONFIDENCE_THRESHOLD = 0.5;
 const float NMS_THRESHOLD = 0.4;
 
+const int LEFT_PIN = 0;
+const int RIGHT_PIN = 1;
 
 void processFrame(Mat& frame, Net& net) {
     int frameWidth = frame.cols;
@@ -76,6 +79,11 @@ void processFrame(Mat& frame, Net& net) {
 }
 
 int main() {
+
+    wiringPiSetup();
+
+    pinMode(LEFT_PIN, OUTPUT);
+    pinMode(RIGHT_PIN, OUTPUT);
 
     Net net = readNetFromDarknet(CONFIG_FILE, WEIGHTS_FILE);
     net.setPreferableBackend(DNN_BACKEND_OPENCV);
