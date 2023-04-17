@@ -22,7 +22,7 @@ void processFrame(Mat& frame, Net& net) {
     int frameWidth = frame.cols;
     int frameHeight = frame.rows;
 
-    Mat inputBlob = blobFromImage(frame, 1 / 255.F, Size(414, 414), Scalar(), true, false);
+    Mat inputBlob = blobFromImage(frame, 1 / 255.F, Size(244, 244), Scalar(), true, false);
     net.setInput(inputBlob);
     vector<Mat> outputBlobs;
     net.forward(outputBlobs, net.getUnconnectedOutLayersNames());
@@ -55,6 +55,13 @@ void processFrame(Mat& frame, Net& net) {
 
     vector<int> indices;
     NMSBoxes(boxes, confidences, CONFIDENCE_THRESHOLD, NMS_THRESHOLD, indices);
+    
+    if (indices.empty()) {
+        cout << "No objects detected near the camera" << endl;
+        digitalWrite(LEFT_PIN, LOW);
+        digitalWrite(RIGHT_PIN, LOW);
+        return;
+    }
 
     float minDistance = numeric_limits<float>::max();
     string position;
@@ -121,6 +128,11 @@ int main() {
     int delay = max(1, (int)(16 - chrono::duration <double, milli> (diff).count()));
     this_thread::sleep_for(chrono::milliseconds(delay));
 
+    if (waitKey(1) >= 0) {
+		digitalWrite(LEFT_PIN, LOW);
+        digitalWrite(RIGHT_PIN, LOW);
+        break;
+    }
 }
 
 cap.release();
