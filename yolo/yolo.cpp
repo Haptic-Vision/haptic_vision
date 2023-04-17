@@ -3,6 +3,8 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui.hpp>
 #include <chrono>
+#include <thread>
+#include <wiringPi.h>
 
 using namespace std;
 using namespace cv;
@@ -13,6 +15,8 @@ const string WEIGHTS_FILE = "yolov4-tiny.weights";
 const float CONFIDENCE_THRESHOLD = 0.5;
 const float NMS_THRESHOLD = 0.4;
 
+const int LEFT_PIN = 0;
+const int RIGHT_PIN = 1;
 
 void processFrame(Mat& frame, Net& net) {
     int frameWidth = frame.cols;
@@ -51,7 +55,7 @@ void processFrame(Mat& frame, Net& net) {
 
     vector<int> indices;
     NMSBoxes(boxes, confidences, CONFIDENCE_THRESHOLD, NMS_THRESHOLD, indices);
-    
+
     float minDistance = numeric_limits<float>::max();
     string position;
     for (int idx : indices) {
@@ -63,10 +67,16 @@ void processFrame(Mat& frame, Net& net) {
             minDistance = distance;
             if (centerX < frameWidth / 3) {
                 position = "left";
+                digitalWrite(LEFT_PIN, HIGH);
+                digitalWrite(RIGHT_PIN, LOW);
             } else if (centerX > 2 * frameWidth / 3) {
                 position = "right";
+                digitalWrite(LEFT_PIN, LOW);
+                digitalWrite(RIGHT_PIN, HIGH);
             } else {
                 position = "center";
+                digitalWrite(LEFT_PIN, HIGH);
+                digitalWrite(RIGHT_PIN, HIGH);
             }
         }        
     }
@@ -75,6 +85,11 @@ void processFrame(Mat& frame, Net& net) {
 }
 
 int main() {
+
+    wiringPiSetup();
+
+    pinMode(LEFT_PIN, OUTPUT);
+    pinMode(RIGHT_PIN, OUTPUT);
 
     Net net = readNetFromDarknet(CONFIG_FILE, WEIGHTS_FILE);
     net.setPreferableBackend(DNN_BACKEND_OPENCV);
@@ -95,7 +110,12 @@ int main() {
         }       
     processFrame(frame, net);
 
-    imshow("Camera Stream", frame);
+    try {
+    	imshow("Camera Stream", frame);
+    } catch (const cv::Exception& e) {
+        continue;
+    }
+
     auto end = chrono::steady_clock::now();
     auto diff = end - start;
     int delay = max(1, (int)(16 - chrono::duration <double, milli> (diff).count()));
