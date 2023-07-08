@@ -20,7 +20,7 @@ A device that helps perceive your surrounding by using the sense of touch.
 - [Software-stack](https://github.com/Haptic-Vision/Software-stack)
 
 # Software-stack
-All of the code required to run the device is here
+To setup and run the device use the following steps:
 
 <img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/Documentation/map%20pulse.gif" width=300 height=500>
 
