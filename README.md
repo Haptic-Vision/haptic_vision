@@ -1,7 +1,7 @@
 # HapticVision (aka "HViz")
 A device that helps perceive your surrounding by using the sense of touch. 
 
-<img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/Documentation/pulsating.gif" width="230" height="400">
+<img src="https://github.com/Haptic-Vision/haptic_vision/blob/joel_ss/extras/Documentation/pulsating.gif" width="230" height="400">
 
 ## The Team
 - [@rdj2829](https://github.com/rdj2829)
@@ -22,7 +22,7 @@ A device that helps perceive your surrounding by using the sense of touch.
 # Software-stack
 To setup and run the device use the following steps:
 
-<img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/Documentation/map%20pulse.gif" width=300 height=500>
+<img src="https://github.com/Haptic-Vision/haptic_vision/blob/joel_ss/extras/Documentation/map%20pulse.gif" width=300 height=500>
 
 ## To run
 1. Update raspberry pi
@@ -58,4 +58,4 @@ g++ -std=c++11 -o yolo yolo.cpp `pkg-config opencv4 --cflags --libs` -lraspicam 
 ```
 # Circuit Design
 
-<img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/Electronics/elec.png" width=300 height=500>
+<img src="https://github.com/Haptic-Vision/haptic_vision/blob/joel_ss/extras/Electronics/elec.png" width=300 height=500>
