@@ -1,5 +1,7 @@
 #include "CameraCapture.h"
 
+//Add comments for each function
+
 CameraCapture::CameraCapture() {}
 
 CameraCapture::~CameraCapture()
