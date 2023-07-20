@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(CameraCallback)
+project(HViz)
 
 # Find OpenCV package
 find_package(OpenCV REQUIRED)
@@ -17,7 +17,7 @@ include_directories(
 )
 
 # Create the executable
-add_executable(camera_callback ${SOURCES})
+add_executable(hviz_run ${SOURCES})
 
 # Link against OpenCV libraries
-target_link_libraries(camera_callback ${OpenCV_LIBRARIES})
+target_link_libraries(hviz_run ${OpenCV_LIBRARIES})

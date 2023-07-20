@@ -1,0 +1,33 @@
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+build/
+
+#VSCode 
+.vscode/
+.vs/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+#CMake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+.DS_Store
