@@ -1,3 +1,7 @@
+// Cpp code header file for a class : CameraCapture,
+// capturing frames from a camera using OpenCV
+
+//guards to prevent multiple inclusions of the same header file.
 #ifndef CAMERA_CAPTURE_H
 #define CAMERA_CAPTURE_H
 
@@ -5,16 +9,16 @@
 
 class CameraCapture {
 public:
-    CameraCapture();
-    ~CameraCapture();
-    bool open(int index);
-    void close();
-    bool isOpened() const;
-    bool read(cv::Mat& frame);
+    CameraCapture(); //Constructor
+    ~CameraCapture(); //Destructor
+    bool open(int index); // Opens camera with a specific index
+    void close(); // Fucntion to close the camera
+    bool isOpened() const; // Checks if the camera is open
+    bool read(cv::Mat& frame); // To read the next fram from the camera and store
     void setProperty(int propId, double value); // New member function to set properties
 
 private:
-    cv::VideoCapture cap;
+    cv::VideoCapture cap; // Instance of cv::Video capture class to rovide access to the camera
 };
 
 #endif  // CAMERA_CAPTURE_H

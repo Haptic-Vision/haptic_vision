@@ -35,6 +35,6 @@ bool CameraCapture::read(cv::Mat& frame) //function is used here to reads the ne
     return cap.read(frame); //returns a boolean value which shows if it was successful in reading.
 }
 
-void CameraCapture::setProperty(int propId, double value) // Function here sets a property value of the PiCam which is given by the propId parameter. 
+void CameraCapture::setProperty(int propId, double value){ // Function here sets a property value of the PiCam which is given by the propId parameter. 
     cap.set(propId, value); //To set the property set() function is used from VideoCApture class.propId is a parameter which defines the property to set, and the value parameter defines the new value for the property.
 }
