@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/camera/CameraCapture.h
+opencv2/opencv.hpp
+-
+
+/home/joseph/haptic_vision_joel_ss/lib/camera/CameraCapture.cpp
+CameraCapture.h
+/home/joseph/haptic_vision_joel_ss/lib/camera/CameraCapture.h
+
+/home/joseph/haptic_vision_joel_ss/lib/camera/CameraCapture.h
+opencv2/opencv.hpp
+-
+
+/home/joseph/haptic_vision_joel_ss/src/main.cpp
+opencv2/opencv.hpp
+-
+CameraCapture.h
+/home/joseph/haptic_vision_joel_ss/src/CameraCapture.h
+
