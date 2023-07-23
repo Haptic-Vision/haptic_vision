@@ -8,11 +8,13 @@ find_package(OpenCV REQUIRED)
 set(SOURCES
     src/main.cpp
     lib/camera/CameraCapture.cpp
+    lib/object_detection/ObjectDetection.cpp
 )
 
 # Set the include directories
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/camera
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/object_detection
     ${OpenCV_INCLUDE_DIRS}
 )
 
