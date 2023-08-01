@@ -7,7 +7,6 @@ bin-release/
 # Other files and folders
 .settings/
 build/
-libtorch/
 
 #VSCode 
 .vscode/
@@ -18,7 +17,6 @@ libtorch/
 *.air
 *.ipa
 *.apk
-*.so
 
 #CMake
 CMakeLists.txt.user
