@@ -13,11 +13,15 @@ find_package(Torch REQUIRED)
 set(SOURCES
     src/YOLOv5LibTorch.cpp
     lib/camera/CameraCapture.cpp
+    lib/yolo/Yolo.cpp
+    lib/obstacle_detector/ObstacleDetector.cpp
 )
 
 include_directories(
     ${PROJECT_SOURCE_DIR}/include
     ${CMAKE_CURRENT_SOURCE_DIR}/lib/camera
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/yolo
+    ${CMAKE_CURRENT_SOURCE_DIR}/lib/obstacle_detector
     ${OpenCV_INCLUDE_DIRS}
 )
 
