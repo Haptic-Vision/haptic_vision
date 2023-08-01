@@ -1,12 +1,13 @@
 #include <opencv2/opencv.hpp>
 #include "CameraCapture.h"
+#include "ObjectDetection.h"
 
 // Function to process each frame captured from the camera
 void processFrame(cv::Mat frame)
 {
     // Add your image processing logic here
     // Example: Display the frame
-    cv::imshow("Camera", frame);
+    // cv::imshow("Camera", frame);
     cv::waitKey(1);  // Adjust the delay as needed
 }
 
@@ -20,6 +21,7 @@ void cameraCallback(const cv::Mat& frame, void* userData)
 int main()
 {
     CameraCapture capture;
+    ObjectDetection objectDetector;
 
     if (!capture.open(0))
     {
@@ -27,7 +29,13 @@ int main()
         return -1;
     }
 
-    cv::namedWindow("Camera", cv::WINDOW_NORMAL);
+    if (!objectDetector.loadCascade("/home/joseph/haptic_vission_joel_ss/data/haarcascade_frontalcatface_extended.xml"))
+    {
+        std::cout << "Failed to load Haar cascade." << std::endl;
+        return -1;
+    }
+
+    // cv::namedWindow("Camera", cv::WINDOW_NORMAL);
 
     // Set the callback function for capturing frames
     capture.setProperty(cv::CAP_PROP_FRAME_WIDTH, 640);
@@ -35,6 +43,7 @@ int main()
     capture.setProperty(cv::CAP_PROP_AUTOFOCUS, 0);  // Disable autofocus (if available)
     capture.setProperty(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);  // Set fixed exposure (if available)
     capture.setProperty(cv::CAP_PROP_BUFFERSIZE, 1);  // Set buffer size to 1 to reduce latency
+    capture.setProperty(cv::CAP_PROP_EXPOSURE, 0.5);
     
     cv::Mat frame;
     while (true)
@@ -46,6 +55,7 @@ int main()
         }
 
         cameraCallback(frame, nullptr);
+        objectDetector.detectObjects(frame);
 
         if (cv::waitKey(1) == 27)  // Exit if the 'Esc' key is pressed
             break;
