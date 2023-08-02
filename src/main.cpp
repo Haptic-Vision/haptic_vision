@@ -1,66 +1,23 @@
-#include <opencv2/opencv.hpp>
+#include <iostream>
+#include <time.h>
 #include "CameraCapture.h"
-#include "ObjectDetection.h"
-
-// Function to process each frame captured from the camera
-void processFrame(cv::Mat frame)
-{
-    // Add your image processing logic here
-    // Example: Display the frame
-    // cv::imshow("Camera", frame);
-    cv::waitKey(1);  // Adjust the delay as needed
-}
-
-// Callback function invoked for each frame captured from the camera
-void cameraCallback(const cv::Mat& frame, void* userData)
-{
-    cv::Mat copyFrame = frame.clone();  // Create a copy of the frame
-    processFrame(copyFrame);
-}
+#include "ObstacleDetector.h"
 
 int main()
 {
-    CameraCapture capture;
-    ObjectDetection objectDetector;
+    // Loading  Module
+    torch::jit::script::Module module = torch::jit::load("../yolov5s.torchscript.pt");
 
-    if (!capture.open(0))
+    std::vector<std::string> classnames;
+    std::ifstream f("../coco.names");
+    std::string name = "";
+    while (std::getline(f, name))
     {
-        std::cout << "Failed to open the camera." << std::endl;
-        return -1;
+        classnames.push_back(name);
     }
 
-    if (!objectDetector.loadCascade("/home/joseph/haptic_vission_joel_ss/data/haarcascade_frontalcatface_extended.xml"))
-    {
-        std::cout << "Failed to load Haar cascade." << std::endl;
-        return -1;
-    }
+    ObstacleDetector obstacleDetector("../yolov5s.torchscript.pt", "../coco.names");
+    obstacleDetector.processFrames();
 
-    // cv::namedWindow("Camera", cv::WINDOW_NORMAL);
-
-    // Set the callback function for capturing frames
-    capture.setProperty(cv::CAP_PROP_FRAME_WIDTH, 640);
-    capture.setProperty(cv::CAP_PROP_FRAME_HEIGHT, 480);
-    capture.setProperty(cv::CAP_PROP_AUTOFOCUS, 0);  // Disable autofocus (if available)
-    capture.setProperty(cv::CAP_PROP_AUTO_EXPOSURE, 0.25);  // Set fixed exposure (if available)
-    capture.setProperty(cv::CAP_PROP_BUFFERSIZE, 1);  // Set buffer size to 1 to reduce latency
-    capture.setProperty(cv::CAP_PROP_EXPOSURE, 0.5);
-    
-    cv::Mat frame;
-    while (true)
-    {
-        if (!capture.read(frame))  // Read a new frame from the camera
-        {
-            std::cout << "Failed to capture a frame." << std::endl;
-            break;
-        }
-
-        cameraCallback(frame, nullptr);
-        objectDetector.detectObjects(frame);
-
-        if (cv::waitKey(1) == 27)  // Exit if the 'Esc' key is pressed
-            break;
-    }
-
-    cv::destroyAllWindows();
     return 0;
 }
