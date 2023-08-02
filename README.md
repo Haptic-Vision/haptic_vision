@@ -6,7 +6,6 @@ A device that helps perceive your surrounding by using the sense of touch with d
 ![Contributors](https://img.shields.io/github/contributors/Haptic-Vision/haptic_vision?style=for-the-badge)
 ![Github Repo stars](https://img.shields.io/github/stars/Haptic-Vision/haptic_vision?style=for-the-badge)
 ![Issues](https://img.shields.io/github/issues-raw/Haptic-Vision/haptic_vision?style=for-the-badge)
-[![License](https://img.shields.io/github/license/Haptic-Vision/haptic_vision?style=for-the-badge)](https://github.com/Haptic-Vision/haptic_vision/blob/main/LICENSE)
  <br />
  <a href="https://github.com/MataPOS/matapos/issues">Report Bug</a>
     .
