@@ -52,13 +52,12 @@ https://github.com/cedricve/raspicam
 ```
 7. Clone program files onto the rasperry pi.
 8. Compile and run.
-
-   ```bash
-   cd build
-   cmake ..
-   make
-   ./../bin/HViz_run
-   ```
+```bash
+cd build
+cmake ..
+make
+./../bin/HViz_run
+```
 
 Note: COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see [yolov5](https://github.com/ultralytics/yolov5).
 ```
