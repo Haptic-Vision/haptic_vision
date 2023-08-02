@@ -46,10 +46,8 @@ sudo raspi-config
 ```bash
 libcamera-jpeg -o image.jpg
 ```
-6. If raspicam dependencies are not installed, follow steps in the following link
-```bash
-https://github.com/cedricve/raspicam
-```
+6. If raspicam dependencies are not installed, follow steps in the following [link](https://github.com/cedricve/raspicam).
+
 7. Clone program files onto the rasperry pi.
 8. Compile and run.
 ```bash
