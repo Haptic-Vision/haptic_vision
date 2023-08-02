@@ -1,0 +1,6 @@
+<map id="/home/joseph/hviz_joel_ss/lib/yolo/Yolo.h" name="/home/joseph/hviz_joel_ss/lib/yolo/Yolo.h">
+<area shape="rect" id="node2" href="$ObstacleDetector_8h.html" title="The file declares all the headers and functions to detct position of obstacle. " alt="" coords="97,95,264,151"/>
+<area shape="rect" id="node5" href="$Yolo_8cpp.html" title="Contains all the definitions of functions need for object detection using YOLO. " alt="" coords="289,102,443,143"/>
+<area shape="rect" id="node3" href="$ObstacleDetector_8cpp.html" title="Code to detect and read out position of obstacle. " alt="" coords="5,199,172,255"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="This file is the main code to run the system. " alt="" coords="197,206,351,247"/>
+</map>

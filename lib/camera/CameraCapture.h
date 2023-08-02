@@ -1,3 +1,14 @@
+/**
+ * @file CameraCapture.h
+ * @author Joseph Joel
+ * @brief The file declares all the headers and functions for running the camera.
+ * @version 0.1
+ * @date 2023-08-02
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef CAMERA_CAPTURE_H
 #define CAMERA_CAPTURE_H
 

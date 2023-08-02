@@ -1,0 +1,103 @@
+\hypertarget{classCameraCapture}{}\section{Camera\+Capture Class Reference}
+\label{classCameraCapture}\index{Camera\+Capture@{Camera\+Capture}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCameraCapture_a9dfe4e4bc8dcf369977e6e81f4f438b1}\label{classCameraCapture_a9dfe4e4bc8dcf369977e6e81f4f438b1}} 
+\hyperlink{classCameraCapture_a9dfe4e4bc8dcf369977e6e81f4f438b1}{Camera\+Capture} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Camera Capture\+:\+: Camera Capture object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCameraCapture_a9fb9058c34d463b8bf9055b2f129adac}\label{classCameraCapture_a9fb9058c34d463b8bf9055b2f129adac}} 
+\hyperlink{classCameraCapture_a9fb9058c34d463b8bf9055b2f129adac}{$\sim$\+Camera\+Capture} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Camera Capture\+:\+: Camera Capture object. \end{DoxyCompactList}\item 
+bool \hyperlink{classCameraCapture_a1a0212fc06b71d35e613b3c781f0814b}{open} (int index)
+\begin{DoxyCompactList}\small\item\em Function opens the launches the camera and gives feedback of its state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCameraCapture_a452aa68c9cf0f1c46586af54faee7bfe}\label{classCameraCapture_a452aa68c9cf0f1c46586af54faee7bfe}} 
+void \hyperlink{classCameraCapture_a452aa68c9cf0f1c46586af54faee7bfe}{close} ()
+\begin{DoxyCompactList}\small\item\em Function closes the camera. \end{DoxyCompactList}\item 
+bool \hyperlink{classCameraCapture_af7fbe43ef6352fae2ca2458a60cd8b9f}{is\+Opened} () const
+\begin{DoxyCompactList}\small\item\em Checks if camera is open. \end{DoxyCompactList}\item 
+bool \hyperlink{classCameraCapture_a3a1d86aca613881d8cd06d3f7b85440f}{read} (cv\+::\+Mat \&frame)
+\begin{DoxyCompactList}\small\item\em Records data from camera. \end{DoxyCompactList}\item 
+void \hyperlink{classCameraCapture_af82994a1857ad331f8d9d24b3ae24962}{set\+Property} (int prop\+Id, double value)
+\begin{DoxyCompactList}\small\item\em Used to set camera properties. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCameraCapture_af7fbe43ef6352fae2ca2458a60cd8b9f}\label{classCameraCapture_af7fbe43ef6352fae2ca2458a60cd8b9f}} 
+\index{Camera\+Capture@{Camera\+Capture}!is\+Opened@{is\+Opened}}
+\index{is\+Opened@{is\+Opened}!Camera\+Capture@{Camera\+Capture}}
+\subsubsection{\texorpdfstring{is\+Opened()}{isOpened()}}
+{\footnotesize\ttfamily bool Camera\+Capture\+::is\+Opened (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if camera is open. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCameraCapture_a1a0212fc06b71d35e613b3c781f0814b}\label{classCameraCapture_a1a0212fc06b71d35e613b3c781f0814b}} 
+\index{Camera\+Capture@{Camera\+Capture}!open@{open}}
+\index{open@{open}!Camera\+Capture@{Camera\+Capture}}
+\subsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool Camera\+Capture\+::open (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Function opens the launches the camera and gives feedback of its state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCameraCapture_a3a1d86aca613881d8cd06d3f7b85440f}\label{classCameraCapture_a3a1d86aca613881d8cd06d3f7b85440f}} 
+\index{Camera\+Capture@{Camera\+Capture}!read@{read}}
+\index{read@{read}!Camera\+Capture@{Camera\+Capture}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily bool Camera\+Capture\+::read (\begin{DoxyParamCaption}\item[{cv\+::\+Mat \&}]{frame }\end{DoxyParamCaption})}
+
+
+
+Records data from camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCameraCapture_af82994a1857ad331f8d9d24b3ae24962}\label{classCameraCapture_af82994a1857ad331f8d9d24b3ae24962}} 
+\index{Camera\+Capture@{Camera\+Capture}!set\+Property@{set\+Property}}
+\index{set\+Property@{set\+Property}!Camera\+Capture@{Camera\+Capture}}
+\subsubsection{\texorpdfstring{set\+Property()}{setProperty()}}
+{\footnotesize\ttfamily void Camera\+Capture\+::set\+Property (\begin{DoxyParamCaption}\item[{int}]{prop\+Id,  }\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Used to set camera properties. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop\+Id} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/joseph/hviz\+\_\+joel\+\_\+ss/lib/camera/\hyperlink{CameraCapture_8h}{Camera\+Capture.\+h}\item 
+/home/joseph/hviz\+\_\+joel\+\_\+ss/lib/camera/\hyperlink{CameraCapture_8cpp}{Camera\+Capture.\+cpp}\end{DoxyCompactItemize}

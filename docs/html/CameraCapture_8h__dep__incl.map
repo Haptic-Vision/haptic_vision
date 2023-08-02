@@ -1,0 +1,6 @@
+<map id="/home/joseph/hviz_joel_ss/lib/camera/CameraCapture.h" name="/home/joseph/hviz_joel_ss/lib/camera/CameraCapture.h">
+<area shape="rect" id="node2" href="$CameraCapture_8cpp.html" title="This files defines all the function needed to run the camera. " alt="" coords="5,102,233,143"/>
+<area shape="rect" id="node3" href="$ObstacleDetector_8h.html" title="The file declares all the headers and functions to detct position of obstacle. " alt="" coords="257,95,424,151"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="This file is the main code to run the system. " alt="" coords="385,206,539,247"/>
+<area shape="rect" id="node4" href="$ObstacleDetector_8cpp.html" title="Code to detect and read out position of obstacle. " alt="" coords="193,199,360,255"/>
+</map>

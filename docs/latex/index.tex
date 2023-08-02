@@ -1,0 +1,113 @@
+A device that helps perceive your surrounding by using the sense of touch with deployment of Y\+O\+L\+Ov5 through Lib\+Torch C++ A\+PI.
+
+\section*{Requirements}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.instructables.com/Install-Ubuntu-18044-LTS-on-Your-Raspberry-Pi-Boar/}{\tt Ubuntu 18.\+04}
+\item Open\+CV 3.\+2.\+0
+\item \href{https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip}{\tt Lib\+Torch 1.\+6.\+0}
+\item \href{https://askubuntu.com/questions/355565/how-do-i-install-the-latest-version-of-cmake-from-the-command-line}{\tt C\+Make 3.\+10.\+2}
+\item \href{https://abyz.me.uk/rpi/pigpio/download.html}{\tt pi\+G\+P\+IO}
+\end{DoxyItemize}
+
+\section*{Software-\/stack}
+
+To setup and run the device use the following steps\+:
+
+\subsection*{To run}
+
+
+\begin{DoxyEnumerate}
+\item Update raspberry pi 
+\begin{DoxyCode}
+sudo apt update
+sudo apt upgrade
+\end{DoxyCode}
+
+\item Install pigpio 
+\begin{DoxyCode}
+sudo apt-get install libpigpio-dev
+\end{DoxyCode}
+
+\item Install Qt 
+\begin{DoxyCode}
+sudo apt-get install qtdeclarative5-dev-tools
+sudo apt-get install libqwt-qt5-dev
+\end{DoxyCode}
+
+\item Install Open\+CV 
+\begin{DoxyCode}
+sudo apt install libopencv-dev
+sudo apt install libopencv-core-dev
+\end{DoxyCode}
+
+\item Setup Pi Cam Once the ribbon cable is connected to the rasperry pi. Got to raspberry pi configurator 
+\begin{DoxyCode}
+sudo raspi-config
+\end{DoxyCode}
+
+\item Go to interface and enable camera option. Then restart you Pi.
+\item Once Pi is restarted, check of camera is working by 
+\begin{DoxyCode}
+libcamera-jpeg -o image.jpg
+\end{DoxyCode}
+
+\item If raspicam dependencies are not installed, follow steps in the following \href{https://github.com/cedricve/raspicam}{\tt link}.
+\item Clone program files onto the rasperry pi.
+\item Compile and run. 
+\begin{DoxyCode}
+mkdir build && cd build
+cmake ..
+make
+./../bin/HViz\_run
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+Note\+:
+\begin{DoxyItemize}
+\item Libtorch package solely contributes to the presence of python files in the project.
+\item C\+O\+C\+O-\/pretrained Y\+O\+L\+Ov5s model has been provided. For more pretrained models, see \href{https://github.com/ultralytics/yolov5}{\tt yolov5}.
+\end{DoxyItemize}
+
+\section*{Technologies}
+
+H\+Viz is built using\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://www.cplusplus.com/}{\tt C++ Programming Language}
+\item \href{https://www.linux.org/}{\tt Debian/\+Ubuntu Linux}
+\item \href{https://www.raspberrypi.org}{\tt Raspberry Pi}
+\item \href{https://cmake.org/}{\tt Cmake}
+\item \href{https://opencv.org/}{\tt Open\+CV}
+\item \href{https://github.com/google/googletest}{\tt Google Test}
+\item \href{https://www.doxygen.nl/index.html}{\tt Doxygen}
+\item \href{https://www.qt.io/}{\tt Qt}
+\end{DoxyItemize}
+
+\subsection*{Socials}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.instagram.com/hapticvision_/}{\tt Instagram}
+\end{DoxyItemize}
+
+\subsection*{The Team}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/rdj2829}{\tt rdj2829}
+\item \href{https://github.com/dheerajsankar}{\tt dheerajsankar}
+\item \href{https://github.com/kprakz}{\tt kprakz}
+\item \href{https://github.com/josephjoel3099}{\tt josephjoel3099}
+\end{DoxyItemize}
+
+\subsection*{Contact Us}
+
+
+\begin{DoxyItemize}
+\item DM us on \href{https://www.instagram.com/hapticvision_/}{\tt hapticvision\+\_\+}
+\item Email us at \href{mailto:hapticvisionuofg@gmail.com}{\tt hapticvisionuofg@gmail.\+com} 
+\end{DoxyItemize}
