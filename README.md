@@ -26,7 +26,7 @@ A device that helps perceive your surrounding by using the sense of touch with d
 # Software-stack
 To setup and run the device use the following steps:
 
-<img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/extras/Documentation/map_20pulse.gif" width=300 height=500>
+<img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/extras/Documentation/map_pulse.gif" width=300 height=500>
 
 ## To run
 1. Update raspberry pi
