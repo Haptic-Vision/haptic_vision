@@ -96,9 +96,11 @@ HViz is built using:
 - [Qt](https://www.qt.io/)
 
 ## Socials
-
 <a href="https://www.instagram.com/hapticvision_/" target="blank"><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="instagram" height="100" width="100" /></a>
-
+<br />
+<br />
+<br />
+<br />
 - [Instagram](https://www.instagram.com/hapticvision_/)
 
 ## The Team
