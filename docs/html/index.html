@@ -66,17 +66,6 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>A device that helps perceive your surrounding by using the sense of touch with deployment of YOLOv5 through LibTorch C++ API.</p>
-<h2>The Team</h2>
-<ul>
-<li><a href="https://github.com/rdj2829">rdj2829</a></li>
-<li><a href="https://github.com/dheerajsankar">dheerajsankar</a></li>
-<li><a href="https://github.com/kprakz">kprakz</a></li>
-<li><a href="https://github.com/josephjoel3099">josephjoel3099</a></li>
-</ul>
-<h2>Socials</h2>
-<ul>
-<li><a href="https://www.instagram.com/hapticvision_/">Instagram</a></li>
-</ul>
 <h1>Requirements</h1>
 <ul>
 <li><a href="https://www.instructables.com/Install-Ubuntu-18044-LTS-on-Your-Raspberry-Pi-Boar/">Ubuntu 18.04</a></li>
@@ -90,15 +79,48 @@ $(function() {
 <h2>To run</h2>
 <ol type="1">
 <li>Update raspberry pi <div class="fragment"><div class="line">sudo apt update</div><div class="line">sudo apt upgrade</div></div><!-- fragment --></li>
+<li>Install pigpio <div class="fragment"><div class="line">sudo apt-get install libpigpio-dev</div></div><!-- fragment --></li>
+<li>Install Qt <div class="fragment"><div class="line">sudo apt-get install qtdeclarative5-dev-tools</div><div class="line">sudo apt-get install libqwt-qt5-dev</div></div><!-- fragment --></li>
 <li>Install OpenCV <div class="fragment"><div class="line">sudo apt install libopencv-dev</div><div class="line">sudo apt install libopencv-core-dev</div></div><!-- fragment --></li>
 <li>Setup Pi Cam Once the ribbon cable is connected to the rasperry pi. Got to raspberry pi configurator <div class="fragment"><div class="line">sudo raspi-config</div></div><!-- fragment --></li>
 <li>Go to interface and enable camera option. Then restart you Pi.</li>
 <li>Once Pi is restarted, check of camera is working by <div class="fragment"><div class="line">libcamera-jpeg -o image.jpg</div></div><!-- fragment --></li>
 <li>If raspicam dependencies are not installed, follow steps in the following <a href="https://github.com/cedricve/raspicam">link</a>.</li>
 <li>Clone program files onto the rasperry pi.</li>
-<li>Compile and run. <div class="fragment"><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">./../bin/HViz_run</div></div><!-- fragment --></li>
+<li>Compile and run. <div class="fragment"><div class="line">mkdir build &amp;&amp; cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">./../bin/HViz_run</div></div><!-- fragment --></li>
 </ol>
-<p>Note: COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see <a href="https://github.com/ultralytics/yolov5">yolov5</a>. </p>
+<p>Note:</p><ul>
+<li>Libtorch package solely contributes to the presence of python files in the project.</li>
+<li>COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see <a href="https://github.com/ultralytics/yolov5">yolov5</a>.</li>
+</ul>
+<h1>Technologies</h1>
+<p>HViz is built using:</p>
+<ul>
+<li><a href="https://www.cplusplus.com/">C++ Programming Language</a></li>
+<li><a href="https://www.linux.org/">Debian/Ubuntu Linux</a></li>
+<li><a href="https://www.raspberrypi.org">Raspberry Pi</a></li>
+<li><a href="https://cmake.org/">Cmake</a></li>
+<li><a href="https://opencv.org/">OpenCV</a></li>
+<li><a href="https://github.com/google/googletest">Google Test</a></li>
+<li><a href="https://www.doxygen.nl/index.html">Doxygen</a></li>
+<li><a href="https://www.qt.io/">Qt</a></li>
+</ul>
+<h2>Socials</h2>
+<ul>
+<li><a href="https://www.instagram.com/hapticvision_/">Instagram</a></li>
+</ul>
+<h2>The Team</h2>
+<ul>
+<li><a href="https://github.com/rdj2829">rdj2829</a></li>
+<li><a href="https://github.com/dheerajsankar">dheerajsankar</a></li>
+<li><a href="https://github.com/kprakz">kprakz</a></li>
+<li><a href="https://github.com/josephjoel3099">josephjoel3099</a></li>
+</ul>
+<h2>Contact Us</h2>
+<ul>
+<li>DM us on <a href="https://www.instagram.com/hapticvision_/">hapticvision_</a></li>
+<li>Email us at <a href="#" onclick="location.href='mai'+'lto:'+'hap'+'ti'+'cvi'+'si'+'onu'+'of'+'g@g'+'ma'+'il.'+'co'+'m'; return false;">hapticvisionuofg@gmail.com</a> </li>
+</ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

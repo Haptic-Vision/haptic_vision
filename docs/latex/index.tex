@@ -1,22 +1,5 @@
 A device that helps perceive your surrounding by using the sense of touch with deployment of Y\+O\+L\+Ov5 through Lib\+Torch C++ A\+PI.
 
-\subsection*{The Team}
-
-
-\begin{DoxyItemize}
-\item \href{https://github.com/rdj2829}{\tt rdj2829}
-\item \href{https://github.com/dheerajsankar}{\tt dheerajsankar}
-\item \href{https://github.com/kprakz}{\tt kprakz}
-\item \href{https://github.com/josephjoel3099}{\tt josephjoel3099}
-\end{DoxyItemize}
-
-\subsection*{Socials}
-
-
-\begin{DoxyItemize}
-\item \href{https://www.instagram.com/hapticvision_/}{\tt Instagram}
-\end{DoxyItemize}
-
 \section*{Requirements}
 
 
@@ -42,6 +25,17 @@ sudo apt update
 sudo apt upgrade
 \end{DoxyCode}
 
+\item Install pigpio 
+\begin{DoxyCode}
+sudo apt-get install libpigpio-dev
+\end{DoxyCode}
+
+\item Install Qt 
+\begin{DoxyCode}
+sudo apt-get install qtdeclarative5-dev-tools
+sudo apt-get install libqwt-qt5-dev
+\end{DoxyCode}
+
 \item Install Open\+CV 
 \begin{DoxyCode}
 sudo apt install libopencv-dev
@@ -63,7 +57,7 @@ libcamera-jpeg -o image.jpg
 \item Clone program files onto the rasperry pi.
 \item Compile and run. 
 \begin{DoxyCode}
-cd build
+mkdir build && cd build
 cmake ..
 make
 ./../bin/HViz\_run
@@ -71,4 +65,49 @@ make
 
 \end{DoxyEnumerate}
 
-Note\+: C\+O\+C\+O-\/pretrained Y\+O\+L\+Ov5s model has been provided. For more pretrained models, see \href{https://github.com/ultralytics/yolov5}{\tt yolov5}. 
+Note\+:
+\begin{DoxyItemize}
+\item Libtorch package solely contributes to the presence of python files in the project.
+\item C\+O\+C\+O-\/pretrained Y\+O\+L\+Ov5s model has been provided. For more pretrained models, see \href{https://github.com/ultralytics/yolov5}{\tt yolov5}.
+\end{DoxyItemize}
+
+\section*{Technologies}
+
+H\+Viz is built using\+:
+
+
+\begin{DoxyItemize}
+\item \href{https://www.cplusplus.com/}{\tt C++ Programming Language}
+\item \href{https://www.linux.org/}{\tt Debian/\+Ubuntu Linux}
+\item \href{https://www.raspberrypi.org}{\tt Raspberry Pi}
+\item \href{https://cmake.org/}{\tt Cmake}
+\item \href{https://opencv.org/}{\tt Open\+CV}
+\item \href{https://github.com/google/googletest}{\tt Google Test}
+\item \href{https://www.doxygen.nl/index.html}{\tt Doxygen}
+\item \href{https://www.qt.io/}{\tt Qt}
+\end{DoxyItemize}
+
+\subsection*{Socials}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.instagram.com/hapticvision_/}{\tt Instagram}
+\end{DoxyItemize}
+
+\subsection*{The Team}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/rdj2829}{\tt rdj2829}
+\item \href{https://github.com/dheerajsankar}{\tt dheerajsankar}
+\item \href{https://github.com/kprakz}{\tt kprakz}
+\item \href{https://github.com/josephjoel3099}{\tt josephjoel3099}
+\end{DoxyItemize}
+
+\subsection*{Contact Us}
+
+
+\begin{DoxyItemize}
+\item DM us on \href{https://www.instagram.com/hapticvision_/}{\tt hapticvision\+\_\+}
+\item Email us at \href{mailto:hapticvisionuofg@gmail.com}{\tt hapticvisionuofg@gmail.\+com} 
+\end{DoxyItemize}
