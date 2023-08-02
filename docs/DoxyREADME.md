@@ -86,3 +86,6 @@ HViz is built using:
 ## Contact Us
 - DM us on [hapticvision_](https://www.instagram.com/hapticvision_/)
 - Email us at [hapticvisionuofg@gmail.com](mailto:hapticvisionuofg@gmail.com)
+
+## License
+Distributed under the MIT License. See [LICENSE](https://github.com/Haptic-Vision/haptic_vision/blob/main/LICENSE) for more information.

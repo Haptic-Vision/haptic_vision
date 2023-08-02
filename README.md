@@ -114,3 +114,4 @@ HViz is built using:
 - Email us at **hapticvisionuofg@gmail.com**
 
 ## License
+Distributed under the MIT License. See [LICENSE](https://github.com/Haptic-Vision/haptic_vision/blob/main/LICENSE) for more information.
