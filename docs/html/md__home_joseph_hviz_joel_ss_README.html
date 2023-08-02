@@ -100,11 +100,12 @@ $(function() {
 <li>Setup Pi Cam Once the ribbon cable is connected to the rasperry pi. Got to raspberry pi configurator <div class="fragment"><div class="line">sudo raspi-config</div></div><!-- fragment --></li>
 <li>Go to interface and enable camera option. Then restart you Pi.</li>
 <li>Once Pi is restarted, check of camera is working by <div class="fragment"><div class="line">libcamera-jpeg -o image.jpg</div></div><!-- fragment --></li>
-<li>If raspicam dependencies are not installed, follow steps in the following link <div class="fragment"><div class="line">https://github.com/cedricve/raspicam</div></div><!-- fragment --></li>
+<li>If raspicam dependencies are not installed, follow steps in the following <a href="https://github.com/cedricve/raspicam">link</a>.</li>
 <li>Clone program files onto the rasperry pi.</li>
-<li>Compile and run.</li>
+<li>Compile and run. <div class="fragment"><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">./../bin/HViz_run</div></div><!-- fragment --></li>
 </ol>
-<div class="fragment"><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make</div><div class="line">./../bin/HViz_run</div></div><!-- fragment --><p>Note: COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see <a href="https://github.com/ultralytics/yolov5">yolov5</a>. ``` </p><h1>Circuit Design</h1>
+<p>Note: COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see <a href="https://github.com/ultralytics/yolov5">yolov5</a>.</p>
+<h1>Circuit Design</h1>
 <div class="image">
 <img src="https://github.com/Haptic-Vision/haptic_vision/blob/joel_ss/extras/Electronics/elec.png" width="300" height="500"/>
 </div>

@@ -3,6 +3,19 @@ A device that helps perceive your surrounding by using the sense of touch with d
 
 <img src="https://github.com/Haptic-Vision/haptic_vision/blob/joel_ss/extras/Documentation/pulsating.gif" width="230" height="400">
 
+![Contributors](https://img.shields.io/github/contributors/Haptic-Vision/haptic_vision?style=for-the-badge)
+![Github Repo stars](https://img.shields.io/github/stars/Haptic-Vision/haptic_vision?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues-raw/Haptic-Vision/haptic_vision?style=for-the-badge)
+[![License](https://img.shields.io/github/license/Haptic-Vision/haptic_vision?style=for-the-badge)](https://github.com/Haptic-Vision/haptic_vision/blob/main/LICENSE)
+ <br />
+ <a href="https://github.com/MataPOS/matapos/issues">Report Bug</a>
+    .
+    <a href="https://github.com/MataPOS/matapos/issues">Request Feature</a>
+ <br />
+
+ ![Branch checks state](https://img.shields.io/github/checks-status/Haptic-Vision/haptic_vision/main?style=flat-square)
+![Commits reader](https://img.shields.io/github/commit-activity/m/Haptic-Vision/haptic_vision?style=flat-square)
+
 ## The Team
 - [@rdj2829](https://github.com/rdj2829)
 - [@dheerajsankar](https://github.com/dheerajsankar)
