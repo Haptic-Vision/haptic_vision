@@ -3,6 +3,9 @@
 ObstacleDetector::ObstacleDetector(const std::string& modelPath, const std::string& classNamesPath)
     : yolo(modelPath, classNamesPath)
 {
+    gpioController.setupPin(pinRight, PI_OUTPUT);
+    gpioController.setupPin(pinCenter, PI_OUTPUT);
+    gpioController.setupPin(pinLeft, PI_OUTPUT);
 }
 
 void ObstacleDetector::processFrames()
@@ -46,14 +49,23 @@ void ObstacleDetector::processFrames()
             if (centerX < frame.cols / 3)
             {
                 positionLabel = "Left";
+                gpioController.writePin(pinRight, 0);
+                gpioController.writePin(pinCenter, 0);
+                gpioController.writePin(pinLeft, 1);
             }
             else if (centerX > frame.cols * 2 / 3)
             {
                 positionLabel = "Right";
+                gpioController.writePin(pinRight, 1);
+                gpioController.writePin(pinCenter, 0);
+                gpioController.writePin(pinLeft, 0);
             }
             else
             {
                 positionLabel = "Center";
+                gpioController.writePin(pinRight, 0);
+                gpioController.writePin(pinCenter, 1);
+                gpioController.writePin(pinLeft, 0);
             }
 
             std::cout << "Obstacle detected at (" << positionLabel << ") with score: " << score << std::endl;
