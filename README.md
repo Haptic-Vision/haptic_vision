@@ -60,7 +60,7 @@ make
 ```
 
 Note: COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see [yolov5](https://github.com/ultralytics/yolov5).
-```
+
 # Circuit Design
 
 <img src="https://github.com/Haptic-Vision/haptic_vision/blob/joel_ss/extras/Electronics/elec.png" width=300 height=500>
