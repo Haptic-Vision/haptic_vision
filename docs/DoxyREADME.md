@@ -1,6 +1,3 @@
-# HapticVision (aka "HViz")
-A device that helps perceive your surrounding by using the sense of touch with deployment of YOLOv5 through LibTorch C++ API.
-
 # Requirements
 - [Ubuntu 18.04](https://www.instructables.com/Install-Ubuntu-18044-LTS-on-Your-Raspberry-Pi-Boar/)
 - OpenCV 3.2.0
