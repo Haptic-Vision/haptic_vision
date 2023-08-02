@@ -30,7 +30,6 @@ private:
 
     // GPIO Pin numbers
     const int pinRight = 17;
-    const int pinCenter = 27;
     const int pinLeft = 22;
 };
 
