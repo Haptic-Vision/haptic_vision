@@ -1,3 +1,14 @@
+/**
+ * @file ObstacleDetector.h
+ * @author Joseph Jeol
+ * @brief The file declares all the headers and functions to detct position of obstacle.
+ * @version 0.1
+ * @date 2023-08-02
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef OBSTACLE_DETECTOR_H
 #define OBSTACLE_DETECTOR_H
 

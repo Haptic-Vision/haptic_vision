@@ -1,0 +1,6 @@
+<map id="/home/joseph/hviz_joel_ss/lib/gpio_controller/GPIOController.h" name="/home/joseph/hviz_joel_ss/lib/gpio_controller/GPIOController.h">
+<area shape="rect" id="node2" href="$GPIOController_8cpp.html" title="Contains all the function needed to actuate the motors on the gloves. " alt="" coords="5,109,160,165"/>
+<area shape="rect" id="node3" href="$ObstacleDetector_8h.html" title="The file declares all the headers and functions to detct position of obstacle. " alt="" coords="185,109,351,165"/>
+<area shape="rect" id="node4" href="$ObstacleDetector_8cpp.html" title="Code to detect and read out position of obstacle. " alt="" coords="91,213,258,269"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="This file is the main code to run the system. " alt="" coords="283,221,437,262"/>
+</map>

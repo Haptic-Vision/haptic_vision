@@ -1,5 +1,22 @@
+/**
+ * @file ObstacleDetector.cpp
+ * @author Joseph Joel
+ * @brief Code to detect and read out position of obstacle.
+ * @version 0.1
+ * @date 2023-08-02
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include "ObstacleDetector.h"
 
+/**
+ * @brief Construct a new Obstacle Detector:: Obstacle Detector object
+ * 
+ * @param modelPath 
+ * @param classNamesPath 
+ */
 ObstacleDetector::ObstacleDetector(const std::string& modelPath, const std::string& classNamesPath)
     : yolo(modelPath, classNamesPath)
 {
@@ -8,6 +25,10 @@ ObstacleDetector::ObstacleDetector(const std::string& modelPath, const std::stri
     gpioController.setupPin(pinLeft, PI_OUTPUT);
 }
 
+/**
+ * @brief Main code that prints out the position of the obstacle (Left | Centre | Right)
+ * 
+ */
 void ObstacleDetector::processFrames()
 {
     CameraCapture cap;

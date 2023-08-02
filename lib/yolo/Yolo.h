@@ -1,3 +1,14 @@
+/**
+ * @file Yolo.h
+ * @author Joseph Joel
+ * @brief This file declares all the headers and functions needed for YOLO object detection and clasiffication.
+ * @version 0.1
+ * @date 2023-08-02
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #ifndef YOLO_H
 #define YOLO_H
 
@@ -21,4 +32,4 @@ private:
     std::vector<torch::Tensor> nonMaxSuppression(torch::Tensor preds, float scoreThreshold, float iouThreshold);
 };
 
-#endif  // YOLO_H
+#endif

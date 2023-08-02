@@ -1,5 +1,22 @@
+/**
+ * @file Yolo.cpp
+ * @author Joseph Joel
+ * @brief Contains all the definitions of functions need for object detection using YOLO.
+ * @version 0.1
+ * @date 2023-08-02
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
+
 #include "Yolo.h"
 
+/**
+ * @brief Construct a new Yolo:: Yolo object.
+ * 
+ * @param modelPath 
+ * @param classNamesPath 
+ */
 Yolo::Yolo(const std::string& modelPath, const std::string& classNamesPath){
     // Load the YOLOv5 model
     module = torch::jit::load(modelPath);
@@ -12,10 +29,23 @@ Yolo::Yolo(const std::string& modelPath, const std::string& classNamesPath){
     }
 }
 
+/**
+ * @brief Returns classnames.
+ * 
+ * @return const std::vector<std::string>& 
+ */
 const std::vector<std::string>& Yolo::getClassNames() const {
     return classnames;
 }
 
+/**
+ * @brief 
+ * 
+ * @param inputFrame 
+ * @param scoreThreshold 
+ * @param iouThreshold 
+ * @return std::vector<torch::Tensor> 
+ */
 std::vector<torch::Tensor> Yolo::detectObjects(const cv::Mat& inputFrame, float scoreThreshold, float iouThreshold){
     // Preparing input tensor
     cv::Mat img;
@@ -34,6 +64,14 @@ std::vector<torch::Tensor> Yolo::detectObjects(const cv::Mat& inputFrame, float 
     return nonMaxSuppression(preds, scoreThreshold, iouThreshold);
 }
 
+/**
+ * @brief Detects objects and puts a bounding box and a label on them.
+ * 
+ * @param preds 
+ * @param score_thresh 
+ * @param iou_thresh 
+ * @return std::vector<torch::Tensor> 
+ */
 std::vector<torch::Tensor> Yolo::nonMaxSuppression(torch::Tensor preds, float score_thresh, float iou_thresh) {
         std::vector<torch::Tensor> output;
         for (size_t i=0; i < preds.sizes()[0]; ++i)

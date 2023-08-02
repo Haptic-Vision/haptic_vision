@@ -1,0 +1,86 @@
+A device that helps perceive your surrounding by using the sense of touch with deployment of Y\+O\+L\+Ov5 through Lib\+Torch C++ A\+PI.
+
+
+
+\subsection*{The Team}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/rdj2829}{\tt }
+\item \href{https://github.com/dheerajsankar}{\tt }
+\item \href{https://github.com/kprakz}{\tt }
+\item \href{https://github.com/josephjoel3099}{\tt }
+\end{DoxyItemize}
+
+\subsection*{Socials}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.instagram.com/hapticvision_/}{\tt Instagram}
+\end{DoxyItemize}
+
+\section*{Requirements}
+
+
+\begin{DoxyItemize}
+\item \href{https://www.instructables.com/Install-Ubuntu-18044-LTS-on-Your-Raspberry-Pi-Boar/}{\tt Ubuntu 18.\+04}
+\item Open\+CV 3.\+2.\+0
+\item \href{https://download.pytorch.org/libtorch/nightly/cpu/libtorch-shared-with-deps-latest.zip}{\tt Lib\+Torch 1.\+6.\+0}
+\item \href{https://askubuntu.com/questions/355565/how-do-i-install-the-latest-version-of-cmake-from-the-command-line}{\tt C\+Make 3.\+10.\+2}
+\item \href{https://abyz.me.uk/rpi/pigpio/download.html}{\tt pi\+G\+P\+IO}
+\end{DoxyItemize}
+
+\section*{Software-\/stack}
+
+To setup and run the device use the following steps\+:
+
+
+
+\subsection*{To run}
+
+
+\begin{DoxyEnumerate}
+\item Update raspberry pi 
+\begin{DoxyCode}
+sudo apt update
+sudo apt upgrade
+\end{DoxyCode}
+
+\item Install Open\+CV 
+\begin{DoxyCode}
+sudo apt install libopencv-dev
+sudo apt install libopencv-core-dev
+\end{DoxyCode}
+
+\item Setup Pi Cam Once the ribbon cable is connected to the rasperry pi. Got to raspberry pi configurator 
+\begin{DoxyCode}
+sudo raspi-config
+\end{DoxyCode}
+
+\item Go to interface and enable camera option. Then restart you Pi.
+\item Once Pi is restarted, check of camera is working by 
+\begin{DoxyCode}
+libcamera-jpeg -o image.jpg
+\end{DoxyCode}
+
+\item If raspicam dependencies are not installed, follow steps in the following link 
+\begin{DoxyCode}
+https://github.com/cedricve/raspicam
+\end{DoxyCode}
+
+\item Clone program files onto the rasperry pi.
+\item Compile and run.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}
+cd build
+cmake ..
+make
+./../bin/HViz\_run
+\end{DoxyCode}
+
+
+Note\+: C\+O\+C\+O-\/pretrained Y\+O\+L\+Ov5s model has been provided. For more pretrained models, see \href{https://github.com/ultralytics/yolov5}{\tt yolov5}. ``` \section*{Circuit Design}
+
+ 

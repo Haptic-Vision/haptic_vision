@@ -1,0 +1,71 @@
+\hypertarget{classYolo}{}\section{Yolo Class Reference}
+\label{classYolo}\index{Yolo@{Yolo}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classYolo_a1824392c7c2bd0212cef879b1807cd12}{Yolo} (const std\+::string \&model\+Path, const std\+::string \&class\+Names\+Path)
+\begin{DoxyCompactList}\small\item\em Construct a new \hyperlink{classYolo}{Yolo}\+:\+: \hyperlink{classYolo}{Yolo} object. \end{DoxyCompactList}\item 
+std\+::vector$<$ torch\+::\+Tensor $>$ \hyperlink{classYolo_af5b9abc491315d152df541b5678e71e1}{detect\+Objects} (const cv\+::\+Mat \&input\+Frame, float score\+Threshold=0.\+5, float iou\+Threshold=0.\+5)
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \hyperlink{classYolo_a567d594b2d190ab5131c7774186b2d0b}{get\+Class\+Names} () const
+\begin{DoxyCompactList}\small\item\em Returns classnames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classYolo_a1824392c7c2bd0212cef879b1807cd12}\label{classYolo_a1824392c7c2bd0212cef879b1807cd12}} 
+\index{Yolo@{Yolo}!Yolo@{Yolo}}
+\index{Yolo@{Yolo}!Yolo@{Yolo}}
+\subsubsection{\texorpdfstring{Yolo()}{Yolo()}}
+{\footnotesize\ttfamily Yolo\+::\+Yolo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model\+Path,  }\item[{const std\+::string \&}]{class\+Names\+Path }\end{DoxyParamCaption})}
+
+
+
+Construct a new \hyperlink{classYolo}{Yolo}\+:\+: \hyperlink{classYolo}{Yolo} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Path} & \\
+\hline
+{\em class\+Names\+Path} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classYolo_af5b9abc491315d152df541b5678e71e1}\label{classYolo_af5b9abc491315d152df541b5678e71e1}} 
+\index{Yolo@{Yolo}!detect\+Objects@{detect\+Objects}}
+\index{detect\+Objects@{detect\+Objects}!Yolo@{Yolo}}
+\subsubsection{\texorpdfstring{detect\+Objects()}{detectObjects()}}
+{\footnotesize\ttfamily std\+::vector$<$ torch\+::\+Tensor $>$ Yolo\+::detect\+Objects (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{input\+Frame,  }\item[{float}]{score\+Threshold = {\ttfamily 0.5},  }\item[{float}]{iou\+Threshold = {\ttfamily 0.5} }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Frame} & \\
+\hline
+{\em score\+Threshold} & \\
+\hline
+{\em iou\+Threshold} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$torch\+::\+Tensor$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classYolo_a567d594b2d190ab5131c7774186b2d0b}\label{classYolo_a567d594b2d190ab5131c7774186b2d0b}} 
+\index{Yolo@{Yolo}!get\+Class\+Names@{get\+Class\+Names}}
+\index{get\+Class\+Names@{get\+Class\+Names}!Yolo@{Yolo}}
+\subsubsection{\texorpdfstring{get\+Class\+Names()}{getClassNames()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::string $>$ \& Yolo\+::get\+Class\+Names (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns classnames. 
+
+\begin{DoxyReturn}{Returns}
+const std\+::vector$<$std\+::string$>$\& 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/joseph/hviz\+\_\+joel\+\_\+ss/lib/yolo/\hyperlink{Yolo_8h}{Yolo.\+h}\item 
+/home/joseph/hviz\+\_\+joel\+\_\+ss/lib/yolo/\hyperlink{Yolo_8cpp}{Yolo.\+cpp}\end{DoxyCompactItemize}
