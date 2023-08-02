@@ -80,11 +80,11 @@ Note:
 - Libtorch package solely contributes to the presence of python files in the project.
 - COCO-pretrained YOLOv5s model has been provided. For more pretrained models, see [yolov5](https://github.com/ultralytics/yolov5).
 
-# Circuit Design
+## Circuit Design
 
 <img src="https://github.com/Haptic-Vision/haptic_vision/blob/main/extras/Electronics/elec.png" width=300 height=500>
 
-# Technologies
+## Technologies
 
 HViz is built using:
 
